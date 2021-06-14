@@ -1,0 +1,94 @@
+#container{
+	width: 60vw;
+	height: 80vh;
+	background-color: slategray;
+	color: floralwhite;
+	margin: auto;
+	text-align: center;
+	padding-top: 10px;
+}
+
+#countdown{
+	width: 50%;
+    height: 40%;
+    background-color: floralwhite;
+    color: darkgray;
+    margin: auto;
+    text-align: center;
+
+}
+
+/*#timeHH{
+	width: 30px;
+	height: 25px;
+}
+#timeMM{
+	width: 30px;
+	height: 25px;
+}
+#timeSS{
+	width: 30px;
+	height: 25px;
+}*/
+
+
+#containerTwo{
+	height: auto;
+	width: auto;
+	border-top: 2px dashed black;
+	border-bottom: 2px dashed black;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#current{
+	align-items: center;
+}
+
+#containerTwo div{
+	display: inline-block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+#SessTime{
+	float: left;
+}
+#BrkTime{
+	float: right;
+}
+
+#pause{
+	float: left;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 100px;
+	height: 40px;
+}
+
+#reset{
+	float: right;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 100px;
+	height: 40px;
+}
+
+#start{
+	/*float: center;*/
+	margin-bottom: 40px;
+	margin-top: 40px;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 100px;
+	height: 40px;
+}
+
