@@ -116,34 +116,18 @@ function handlePause(event){
 }
 
 
-						//HANDLING RESET BUTTON
 
-reset.addEventListener("click", handleReset);
-function handleReset(event){
-	current.innerHTML = "Start Again!"
-	setTimeout(function(){
-		clearInterval(Clock);
-	},0);
-	console.log(timer);
-	startBtn.disabled = false;
-	sessionTime = 0;
-	breakTime = 0;
-}
 
 							//BREAK TIME
 //handle break buttons
 //if !session time && breaktime display Break time!
 //if session time ends start break time
 
-// if(sessionTime == 0 && breakTime > 0){
-// 	current.innerHTML = "Break Time!";
-
-// }
-
+var BrkClock;
 function initiateBreakTime(breakTime){
 	current.innerHTML = "Break !";
 	var timer = breakTime*60;
-	var BrkClock = setInterval(function(){
+	BrkClock = setInterval(function(){
 		if(timer==0){
 			clearInterval(BrkClock);
 		}
@@ -160,3 +144,29 @@ function initiateBreakTime(breakTime){
 }
 
 
+						//HANDLING RESET BUTTON
+
+reset.addEventListener("click", handleReset);
+function handleReset(event){
+	current.innerHTML = "Start Again!"
+	setTimeout(function(){
+		clearInterval(Clock);
+	},0);
+	setTimeout(function(){
+		clearInterval(BrkClock);
+	},0);
+	console.log(timer);
+	
+	sessionTime = 0;
+	breakTime = 0;
+	sminus.disabled = false;
+	bminus.disabled = false;
+	splus.disabled = false;
+	bplus.disabled = false;
+	startBtn.disabled = false;
+	if(sessionTime==0){
+		sminus.disabled = true;
+		bminus.disabled = true;
+	}
+	startBtn.addEventListener("click", handleStart);
+}
